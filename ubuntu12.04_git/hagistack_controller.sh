@@ -199,7 +199,7 @@ cd /opt/glance && python setup.py install
 #glance setting
 useradd glance -m -d /var/lib/glance -s /bin/false
 usermod -G $STACK_USER glance
-mkdir /etc/keystone /var/log/glance
+mkdir /etc/glance /var/log/glance
 mkdir /var/lib/glance/scrubber /var/lib/glance/image-cache
 
 #glance setting
