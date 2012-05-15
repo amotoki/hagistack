@@ -70,7 +70,7 @@ apt-get install -y tgt memcached python-memcache \
                    dnsmasq-base dnsmasq-utils kpartx parted arping        \
                    iptables ebtables sqlite3 libsqlite3-dev lvm2 curl     \
                    mysql-server rabbitmq-server euca2ools curl vlan       \
-                   apache2 libapache2-mod-wsgi python-numpy
+                   apache2 libapache2-mod-wsgi python-numpy python-prettytable
 
 #mysql setting for contoller node
 sed -i 's#127.0.0.1#0.0.0.0#g' /etc/mysql/my.cnf
