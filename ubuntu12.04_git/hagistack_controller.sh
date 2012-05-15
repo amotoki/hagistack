@@ -215,7 +215,7 @@ sed -i "s#127.0.0.1#$NOVA_CONTOLLER_HOSTNAME#" /etc/glance/glance-registry-paste
 sed -i "s/%SERVICE_TENANT_NAME%/$ADMIN_TENANT_NAME/" /etc/glance/glance-registry-paste.ini
 sed -i "s/%SERVICE_USER%/$ADMIN_USERNAME/" /etc/glance/glance-registry-paste.ini
 sed -i "s/%SERVICE_PASSWORD%/$ADMIN_PASSWORD/" /etc/glance/glance-registry-paste.ini
-sed -i "s#sql_connection = sqlite:///glance.sqlite#sql_connection = mysql://glance:password@$NOVA_CONTOLLER_HOSTNAME#/glance#" /etc/glance/glance-registry.conf
+sed -i "s#sql_connection = sqlite:///glance.sqlite#sql_connection = mysql://glance:password@$NOVA_CONTOLLER_HOSTNAME/glance#" /etc/glance/glance-registry.conf
 echo -e "\n[paste_deploy]\nflavor = keystone"  | tee -a /etc/glance/glance-registry.conf
 chown glance:glance /var/log/glance /var/lib/glance/scrubber /var/lib/glance/image-cache
 
