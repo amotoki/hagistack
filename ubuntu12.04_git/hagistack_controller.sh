@@ -104,11 +104,11 @@ chown $STACK_USER:$STACK_USER /home/$STACK_USER/keystonerc
 . /home/$STACK_USER/keystonerc
 
 #keystone download
-git clone git://github.com/openstack/keystone /opt/keystone
+git clone https://github.com/openstack/keystone /opt/keystone
 cd /opt/keystone ; git checkout -b essex origin/stable/essex
 
 #keystoneclient download
-git clone git://github.com/openstack/python-keystoneclient /opt/python-keystoneclient
+git clone https://github.com/openstack/python-keystoneclient /opt/python-keystoneclient
 cd /opt/python-keystoneclient ; git checkout -b essex refs/tags/2012.1
 
 #keystone install
@@ -188,7 +188,7 @@ sed -i "66s/secrete/$ADMIN_PASSWORD/" /home/$STACK_USER/sample_data.sh
 /home/$STACK_USER/sample_data.sh
 
 #glance download
-git clone git://github.com/openstack/glance /opt/glance
+git clone https://github.com/openstack/glance /opt/glance
 cd /opt/glance ; git checkout -b essex origin/stable/essex
 
 #glance install
