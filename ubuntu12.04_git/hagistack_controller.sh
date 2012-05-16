@@ -285,7 +285,7 @@ mkdir /var/lib/nova/instances /var/lib/nova/images /var/lib/nova/keys /var/lib/n
 chown nova:nova /var/log/nova /var/lib/nova -R
 
 #nova.conf setting
-cat << 'NOVA_SETUP' | tee /etc/nova/nova.conf > /dev/null
+cat << NOVA_SETUP | tee /etc/nova/nova.conf > /dev/null
 [DEFAULT]
 #verbose=true
 allow_admin_api=true
